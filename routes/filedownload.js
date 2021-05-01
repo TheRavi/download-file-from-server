@@ -12,8 +12,9 @@ router.get('/:filename', (req, res) => {
     let filetodownload = req.params.filename;
     logger.info(`File Name: ${filetodownload}`);
     filetodownload = directory + filetodownload;
-    if (fs.existsSync(filetodownload)) {
-      res.download(filetodownload, path.basename(filetodownload));
+    const resolvedPath = path.resolve(filetodownload);
+    if (fs.existsSync(resolvedPath)) {
+      res.download(filetodownload, path.basename(resolvedPath));
     } else {
       logger.error(`File do not exists: ${req.params.filename}`);
       res.send({ error: 'file not found' });
