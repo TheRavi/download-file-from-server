@@ -1,7 +1,7 @@
 appenders:
   fileappender:
     type: dateFile
-    filename: log/downloader.log
+    filename: logs/downloader.log
     pattern: '-yyyy-MM-dd'
     layout:
       type: pattern
