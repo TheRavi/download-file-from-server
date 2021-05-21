@@ -4,7 +4,8 @@
   "description": "It downloads the given file from server.",
   "scripts": {
     "start": "node ./src/bin/www",
-    "dev": "nodemon -L ./src/bin/www"
+    "dev": "nodemon -L ./src/bin/www",
+    "cypress:open": "cypress open --config-file cypress/cypress.json"
   },
   "author": "r0cky",
   "dependencies": {
