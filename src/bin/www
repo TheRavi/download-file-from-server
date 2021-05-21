@@ -10,7 +10,7 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 const app = require('../app');
 
-const logconfig = yaml.load(fs.readFileSync('config/log4js-config.yml', 'utf8'));
+const logconfig = yaml.load(fs.readFileSync('src/config/log4js-config.yml', 'utf8'));
 log4js.configure(logconfig);
 const logger = log4js.getLogger('startup');
 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "It downloads the given file from server.",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon -L ./bin/www"
+    "start": "node ./src/bin/www",
+    "dev": "nodemon -L ./src/bin/www"
   },
   "author": "r0cky",
   "dependencies": {
@@ -15,8 +15,10 @@
     "log4js": "^6.3.0"
   },
   "devDependencies": {
+    "cypress": "^7.3.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.7"
   }
