@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "It downloads the given file from server.",
   "scripts": {
-    "start": "node ./src/bin/www",
+    "start": "nyc --silent node ./src/bin/www",
     "dev": "nodemon -L ./src/bin/www",
-    "cypress:open": "cypress open --config-file cypress/cypress.json"
+    "cypress:open": "cypress open --config-file cypress/cypress.json",
+    "test": "cypress run --config-file cypress/cypress.json"
   },
   "author": "r0cky",
   "dependencies": {
@@ -16,11 +17,13 @@
     "log4js": "^6.3.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.5",
     "cypress": "^7.3.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0"
   }
 }
