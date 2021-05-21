@@ -5,6 +5,10 @@ const logger = require('log4js').getLogger(path.parse(__filename).name);
 
 const app = express();
 
+if (global.__coverage__) {
+  require('@cypress/code-coverage/middleware/express')(app);
+}
+
 app.use(helmet());
 app.use(express.json());
 
