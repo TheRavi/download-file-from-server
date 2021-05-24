@@ -61,7 +61,26 @@ Start the server
   npm start
 ```
 
-  
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+To open Cypress and run tests, run the following command
+
+```bash
+  npm run cypress:open
+```
+To see coverage report, run the following command
+
+```bash
+  npx nyc report
+```
+
+
 ## Authors
 
 - [@TheRavi](https://www.github.com/TheRavi)
